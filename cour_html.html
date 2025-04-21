@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Introduction à HTML</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .cours-container {
+      max-width: 1000px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .cours-container h2 {
+      color: #2a5298;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .cours-container h3 {
+      margin-top: 30px;
+      color: #1e3c72;
+    }
+
+    .cours-container p {
+      margin-bottom: 15px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .highlight-box {
+      background: #f4f8ff;
+      border-left: 6px solid #2a5298;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: #f9f9f9;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #2a5298;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background: #1e3c72;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>🎓 LearnUp</h1>
+      <nav>
+        <a href="acceuil.html">Accueil</a>
+        <a href="acceuil.html">Formations</a>
+        <a href="inscri.html">Mon Compte</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="cours-container">
+      <h2>🔷 Introduction à HTML</h2>
+
+      <p>
+        HTML (HyperText Markup Language) est le langage de balisage standard utilisé pour créer et structurer les pages web. Il permet de décrire les éléments qui composent une page web, comme les titres, paragraphes, images, liens, tableaux, formulaires, etc.
+      </p>
+
+      <p>
+        Contrairement aux langages de programmation (comme JavaScript ou Python), HTML ne contient pas de logique (pas de conditions, boucles, etc.). Son rôle est structurel, pas fonctionnel.
+      </p>
+
+      <p>
+        Le HTML est à la base de chaque page web, et fonctionne en collaboration avec le CSS (pour le style) et JavaScript (pour les interactions).
+      </p>
+
+      <h3>🛠️ Comment fonctionne HTML ?</h3>
+
+      <div class="highlight-box">
+        <strong>Structure en balises :</strong><br>
+        HTML utilise des balises (tags) pour entourer le contenu. Chaque balise a un rôle précis.
+        <pre><code>&lt;p&gt;Ceci est un paragraphe.&lt;/p&gt;</code></pre>
+      </div>
+
+      <div class="highlight-box">
+        <strong>Balise d'ouverture et de fermeture :</strong><br>
+        Presque toutes les balises HTML ont une balise ouvrante (<code>&lt;p&gt;</code>) et une balise fermante (<code>&lt;/p&gt;</code>), sauf certaines balises dites autoclosantes (comme <code>&lt;img /&gt;</code> pour les images).
+      </div>
+
+      <div class="highlight-box">
+        <strong>Hiérarchie des balises :</strong><br>
+        HTML suit une structure hiérarchique, avec une balise principale appelée <code>&lt;html&gt;</code>, qui contient <code>&lt;head&gt;</code> (métadonnées, titre, lien vers CSS...) et <code>&lt;body&gt;</code> (contenu visible de la page).
+      </div>
+
+      <p><strong>Exemple :</strong></p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Ma première page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Bienvenue !&lt;/h1&gt;
+    &lt;p&gt;Ceci est une page HTML simple.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+      <div class="highlight-box">
+        <strong>Lecture par le navigateur :</strong><br>
+        Les navigateurs (Chrome, Firefox, Edge…) lisent le fichier HTML et interprètent les balises pour afficher la page de manière visuelle à l'utilisateur.
+      </div>
+
+      <h3>✅ En résumé :</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Élément</th>
+            <th>Rôle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTML</td>
+            <td>Structure la page</td>
+          </tr>
+          <tr>
+            <td>Balises</td>
+            <td>Définissent les éléments</td>
+          </tr>
+          <tr>
+            <td>Navigateur</td>
+            <td>Lit le HTML et affiche la page</td>
+          </tr>
+          <tr>
+            <td>Collaboration</td>
+            <td>Fonctionne avec CSS (style) et JS (comportement)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 LearnUp - Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>

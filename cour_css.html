@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Introduction à CSS</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .cours-container {
+      max-width: 1000px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .cours-container h2 {
+      color: #2a5298;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .cours-container h3 {
+      margin-top: 30px;
+      color: #1e3c72;
+    }
+
+    .cours-container p {
+      margin-bottom: 15px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .highlight-box {
+      background: #f4f8ff;
+      border-left: 6px solid #2a5298;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 20px 0;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background: #1e3c72;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>🎓 LearnUp</h1>
+      <nav>
+        <a href="acceuil.html">Accueil</a>
+        <a href="acceuil.html">Formations</a>
+        <a href="inscri.html">Mon Compte</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="cours-container">
+      <h2>🔷 Introduction à CSS</h2>
+
+      <p>
+        CSS (Cascading Style Sheets), ou feuilles de style en cascade en français, est un langage utilisé pour décrire la présentation visuelle d'une page web écrite en HTML. Il permet de styliser les éléments HTML en définissant leurs couleurs, polices, marges, tailles, positions, animations, etc.
+      </p>
+
+      <p>
+        En d'autres termes, HTML structure la page, et CSS l'habille pour la rendre plus belle, claire et agréable à utiliser.
+      </p>
+
+      <h3>🔧 Comment fonctionne CSS ?</h3>
+
+      <div class="highlight-box">
+        <strong>1. Sélecteurs :</strong><br>
+        Ils servent à cibler les éléments HTML que vous souhaitez styliser. Exemples :
+        <pre><code>h1 { color: blue; }
+#menu { background-color: gray; }
+.button { padding: 10px; }</code></pre>
+      </div>
+
+      <div class="highlight-box">
+        <strong>2. Propriétés et valeurs :</strong><br>
+        Chaque règle CSS est composée d’une propriété (ex: <code>color</code>) et d’une valeur (ex: <code>blue</code>).
+        <pre><code>p {
+  font-size: 16px;
+  color: black;
+}</code></pre>
+      </div>
+
+      <div class="highlight-box">
+        <strong>3. Cascade et priorité :</strong><br>
+        CSS suit un ordre de priorité (appelé "cascade") pour déterminer quelle règle appliquer quand plusieurs s’appliquent à un même élément.
+        <ul>
+          <li>Le type de sélecteur (<code>id</code> > <code>class</code> > <code>élément</code>)</li>
+          <li>L’ordre dans le fichier</li>
+          <li>Les règles <code>!important</code></li>
+        </ul>
+      </div>
+
+      <h3>📌 Les différentes manières d’ajouter du CSS</h3>
+
+      <div class="highlight-box">
+        <strong>CSS en ligne (inline)</strong> – directement dans l’attribut d’un élément HTML :
+        <pre><code>&lt;p style="color: red;"&gt;Texte en rouge&lt;/p&gt;</code></pre>
+      </div>
+
+      <div class="highlight-box">
+        <strong>CSS interne (internal)</strong> – dans une balise <code>&lt;style&gt;</code> dans le <code>&lt;head&gt;</code> :
+        <pre><code>&lt;style&gt;
+  body { background-color: lightgrey; }
+&lt;/style&gt;</code></pre>
+      </div>
+
+      <div class="highlight-box">
+        <strong>CSS externe (external)</strong> – via un fichier <code>.css</code> lié à l’HTML :
+        <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 LearnUp - Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>

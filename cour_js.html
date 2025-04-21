@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Introduction à React.js</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f6fc;
+    }
+
+    header {
+      background-color: #282c34;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #61dafb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .cours-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .cours-container h2 {
+      color: #007acc;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .cours-container h3 {
+      margin-top: 30px;
+      color: #005999;
+    }
+
+    .cours-container p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .highlight-box {
+      background: #f0f7ff;
+      border-left: 6px solid #007acc;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+
+    pre {
+      background: #1e1e1e;
+      color: #dcdcdc;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #007acc;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background: #282c34;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎓 LearnUp</h1>
+    <nav>
+      <a href="acceuil.html">Accueil</a>
+      <a href="acceuil.html">Formations</a>
+      <a href="inscri.html">Mon Compte</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cours-container">
+      <h2>🧠 Introduction à React.js</h2>
+
+      <p>
+        React.js est une bibliothèque JavaScript développée par Facebook en 2013. Elle est utilisée pour construire des interfaces utilisateur (UI) dynamiques et interactives, en particulier pour les applications web monopage (Single Page Applications - SPA).
+      </p>
+
+      <p>
+        Ce qui distingue React, c’est sa capacité à mettre à jour et à rendre efficacement les composants lorsqu’il y a des changements de données. Il repose sur une approche déclarative, ce qui signifie que vous décrivez ce que vous voulez voir à l’écran, et React se charge de mettre à jour l’interface en conséquence.
+      </p>
+
+      <h3>⚙️ Comment fonctionne React.js ?</h3>
+
+      <div class="highlight-box">
+        <strong>Composants :</strong> L'interface est découpée en petites briques réutilisables appelées composants. Chaque composant peut contenir du HTML, du CSS, et du JavaScript. Exemple : un bouton, une barre de navigation ou une carte peuvent être des composants.
+      </div>
+
+      <div class="highlight-box">
+        <strong>JSX (JavaScript XML) :</strong> React utilise le JSX, une extension de JavaScript qui permet d’écrire du HTML dans le code JavaScript. Cela rend la structure des composants plus lisible et expressive.
+        <pre><code>function Bonjour(props) {
+  return &lt;h1&gt;Bonjour, {props.nom} !&lt;/h1&gt;;
+}</code></pre>
+      </div>
+
+      <div class="highlight-box">
+        <strong>State (État) et Props (Propriétés) :</strong><br>
+        <ul>
+          <li><strong>Props</strong> : permettent de transmettre des données d’un composant parent vers un composant enfant.</li>
+          <li><strong>State</strong> : gère les données internes d’un composant et permet de rendre l’interface interactive (ex. compteur, champs de formulaire).</li>
+        </ul>
+      </div>
+
+      <div class="highlight-box">
+        <strong>Virtual DOM :</strong> React crée un DOM virtuel pour suivre les changements dans l'interface. Lorsqu’un changement a lieu, React compare l'ancien DOM virtuel avec le nouveau, et met à jour seulement les éléments modifiés dans la vraie page HTML.
+      </div>
+
+      <div class="highlight-box">
+        <strong>Cycle de vie des composants :</strong> React offre des méthodes (ou hooks comme <code>useEffect</code>) qui permettent de contrôler ce qui se passe à différents moments du cycle de vie d’un composant (ex. lors du montage, mise à jour ou démontage).
+      </div>
+
+      <h3>✅ En résumé</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Avantage de React.js</th>
+            <th>Explication</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Réutilisabilité</td>
+            <td>Composants modulaires</td>
+          </tr>
+          <tr>
+            <td>Performances</td>
+            <td>DOM virtuel intelligent</td>
+          </tr>
+          <tr>
+            <td>Écosystème riche</td>
+            <td>Bibliothèques comme Redux, React Router, etc.</td>
+          </tr>
+          <tr>
+            <td>Large communauté</td>
+            <td>Beaucoup de ressources et support</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 LearnUp - Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #f8f9fc, #e0ecff);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: #1e3c72;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    animation: slideInLeft 1s ease;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(to right, #2a5298, #1e3c72);
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    animation: fadeInDown 1s ease;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background: #ffd700;
+    color: #1e3c72;
+    padding: 12px 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #ffb700;
+}
+
+/* IMAGE HERO INNOVANTE */
+.hero-image {
+    width: 200px;
+    height: auto;
+    border-radius: 50%; /* Cercle */
+    border: 5px solid #ffd700;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    animation: floatIn 1.5s ease-in-out;
+}
+
+.hero-image:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* COURSES SECTION */
+.courses {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.courses h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #1e3c72;
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.course-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.course-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #2a5298;
+}
+
+.course-card p {
+    margin-bottom: 15px;
+}
+
+/* PROGRESS BAR */
+progress {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    appearance: none;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(to right, #2a5298, #1e3c72);
+    border-radius: 10px;
+}
+
+/* Card Links */
+.course-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #1e3c72;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.course-card a:hover {
+    background-color: #2a5298;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e3c72;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* ANIMATIONS */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes floatIn {
+    0% {
+        transform: scale(0.8) translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
